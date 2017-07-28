@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "DOM Hasher",
+  "description": "Verifies the hashes of the DOM",
+  "version": "1.0",
+  "browser_action": {
+      "default_icon": "icon_48.png",
+      "default_popup": "popup.html"
+  },
+  "icons": { "16": "icon_16.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png" },
+  "background": {
+    "scripts": ["cryptojs-core.js",
+                "cryptojs-sha256.js",
+                "background.js"]
+  },
+  "permissions": [
+    "webNavigation",
+    "*://*/*"
+  ]
+}
